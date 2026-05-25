@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# Render check output
+.render-check/
+
+# Backups
+*.backup
+*.light-backup
+
+# Test/debug pages
+test-*.html
+debug-*.html
+
+# Documentation (internal only)
+*.md
+!README.md
+
+# Temporary images (Open Design uploads)
+mp*-image.png
+mp*-image.jpg
+mpc*.jpg
+mpd*.jpg
+od-*.png
+
+# Artifact metadata
+*.artifact.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Open Design internals
+.od-skills/

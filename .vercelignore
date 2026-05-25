@@ -1,0 +1,10 @@
+.od-skills
+.git
+.render-check
+.DS_Store
+node_modules
+*.backup
+*.light-backup
+*.artifact.json
+scripts/
+package.json

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>账户 · ThunderStone 应用市场</title>
+  <link rel="stylesheet" href="../assets/system.css">
+</head>
+<body>
+  <div id="app">
+  <div class="shell" data-shell>
+    <main class="main">
+      <section class="grid">
+        <div class="panel span-8">
+          <div class="account-preview">
+            <div class="account-avatar">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M3 21a9 9 0 0 1 18 0"/></svg>
+            </div>
+            <div class="account-info">
+              <span class="tag">功能预留</span>
+              <h1>账户功能即将开放</h1>
+              <p>当前版本聚焦应用浏览、下载和更新管理。账户相关功能将在后续版本开放。</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel span-4">
+          <div class="section-head"><h2>快捷操作</h2></div>
+          <div class="settings-list">
+            <a class="list-card" href="home.html">
+              <span class="rank-icon" style="background:var(--cyan)">
+                <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </span>
+              <div><strong>返回推荐</strong><p>浏览今日推荐应用</p></div>
+            </a>
+            <a class="list-card" href="catalog.html">
+              <span class="rank-icon" style="background:var(--blue)">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+              </span>
+              <div><strong>浏览分类</strong><p>按分类查找应用</p></div>
+            </a>
+            <a class="list-card" href="manage.html">
+              <span class="rank-icon" style="background:var(--gold)">
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </span>
+              <div><strong>我的应用</strong><p>管理已安装和下载</p></div>
+            </a>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-box></div>
+  </div>
+  <script src="../assets/app.js"></script>
+  <script>initPage('账户');</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/home", "destination": "/screens/home.html" },
+    { "source": "/catalog", "destination": "/screens/catalog.html" },
+    { "source": "/detail", "destination": "/screens/detail.html" },
+    { "source": "/manage", "destination": "/screens/manage.html" },
+    { "source": "/account", "destination": "/screens/users.html" },
+    { "source": "/appmarket-management", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

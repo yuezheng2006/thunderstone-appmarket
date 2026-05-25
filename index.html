@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>ThunderStone 应用市场</title>
+  <link rel="stylesheet" href="assets/system.css">
+</head>
+<body>
+  <div id="app">
+  <div class="shell" data-shell>
+    <main class="main home-main">
+
+      <!-- 今日推荐 - 编辑精选大卡 -->
+      <section class="editor-pick" data-editor-pick></section>
+
+      <!-- 精选应用 - 横向滚动 -->
+      <section class="curated-section">
+        <div class="section-head">
+          <h2>精选应用</h2>
+        </div>
+        <div class="curated-scroll" data-curated></div>
+      </section>
+
+      <!-- 场景推荐 -->
+      <section class="scene-section" data-scenes></section>
+
+      <!-- 排行榜 -->
+      <section class="charts-section">
+        <div class="section-head">
+          <h2>排行榜</h2>
+        </div>
+        <div class="charts-grid" data-charts></div>
+      </section>
+
+    </main>
+  </div>
+  <div class="toast" data-toast-box></div>
+  </div>
+  <script src="assets/app.js"></script>
+  <script>initPage('推荐');</script>
+</body>
+</html>

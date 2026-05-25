@@ -1,0 +1,10 @@
+{
+  "name": "thunderstone-app-market",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check assets/app.js",
+    "render-check": "node scripts/render-check.mjs",
+    "deploy": "vercel deploy --prod"
+  }
+}

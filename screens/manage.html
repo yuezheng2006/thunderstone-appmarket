@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>管理 · ThunderStone 应用市场</title>
+  <link rel="stylesheet" href="../assets/system.css">
+</head>
+<body>
+  <div id="app">
+  <div class="shell" data-shell>
+    <main class="main">
+      <div class="screen-title">
+        <div>
+          <div class="eyebrow">应用管理</div>
+          <h1>已安装和下载任务</h1>
+        </div>
+        <button class="btn btn-primary" data-toast="开始升级全部应用">全部升级</button>
+      </div>
+
+      <section class="grid manage-grid">
+        <!-- 升级摘要 -->
+        <div class="hero manage-summary">
+          <div class="hero-copy">
+            <span class="tag gold">2 个可升级</span>
+            <h2>曲谱和清理工具有新版本</h2>
+            <p>建议在 Wi‑Fi 下升级，不会打断正在播放的伴奏。</p>
+            <div class="summary-list">
+              <span>懿美曲谱 → v2.32</span>
+              <span>一键清理 → v1.9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 下载任务 + 已安装 -->
+        <section class="manage-panel">
+          <!-- 下载任务 -->
+          <div class="panel">
+            <div class="section-head"><h2>下载任务</h2></div>
+            <div class="settings-list">
+              <div class="download-card">
+                <span class="rank-icon brand-img" style="background:#285CF6"><img src="../assets/leishi-kge-appicon.png" alt="雷石 K 歌"></span>
+                <div class="download-info">
+                  <strong>雷石 K 歌</strong>
+                  <div class="progress-bar"><div class="progress-fill" style="width:68%"></div></div>
+                  <span class="download-meta">正在下载素材包 · 剩余 18 MB</span>
+                </div>
+                <span class="download-percent">68%</span>
+              </div>
+              <div class="download-card">
+                <span class="rank-icon brand-img" style="background:#20C66A"><img src="../assets/app-icons/qq-music.jpg" alt="QQ音乐TV版"></span>
+                <div class="download-info">
+                  <strong>QQ音乐TV版</strong>
+                  <div class="progress-bar"><div class="progress-fill paused" style="width:32%"></div></div>
+                  <span class="download-meta">等待 Wi‑Fi 网络</span>
+                </div>
+                <span class="download-percent paused">暂停</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 已安装 -->
+          <div class="panel">
+            <div class="section-head">
+              <h2>已安装</h2>
+              <div class="segmented">
+                <button class="active" data-segment="all">全部</button>
+                <button data-segment="installed">已装</button>
+                <button data-segment="update">升级</button>
+              </div>
+            </div>
+            <div class="app-grid" data-update-list></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-box></div>
+  </div>
+  <script src="../assets/app.js"></script>
+  <script>initPage('管理');</script>
+</body>
+</html>
