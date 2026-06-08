@@ -7,75 +7,74 @@
   <link rel="stylesheet" href="../assets/system.css">
 </head>
 <body>
-  <div id="app">
-  <div class="shell" data-shell>
-    <main class="main">
-      <div class="screen-title">
-        <div>
-          <div class="eyebrow">应用管理</div>
-          <h1>已安装和下载任务</h1>
+  <div id="app" data-od-id="app-root">
+  <div class="shell" data-shell data-od-id="shell">
+    <main class="main" data-od-id="main-content">
+      <div class="screen-title" data-od-id="screen-title">
+        <div data-od-id="title-content">
+          <div class="eyebrow" data-od-id="title-eyebrow">应用管理</div>
+          <h1 data-od-id="title-heading">已安装和下载任务</h1>
         </div>
-        <button class="btn btn-primary" data-toast="开始升级全部应用">全部升级</button>
       </div>
 
-      <section class="grid manage-grid">
-        <!-- 升级摘要 -->
-        <div class="hero manage-summary">
-          <div class="hero-copy">
-            <span class="tag gold">2 个可升级</span>
-            <h2>曲谱和清理工具有新版本</h2>
-            <p>建议在 Wi‑Fi 下升级，不会打断正在播放的伴奏。</p>
-            <div class="summary-list">
-              <span>懿美曲谱 → v2.32</span>
-              <span>一键清理 → v1.9</span>
-            </div>
+      <section class="manage-grid" data-od-id="manage-grid">
+        <!-- 升级提示条 -->
+        <div class="manage-summary" data-od-id="manage-summary">
+          <div class="hero-copy" data-od-id="summary-hero">
+            <span class="tag gold" data-od-id="summary-tag">2 个可升级</span>
+            <h2 data-od-id="summary-title">曲谱和清理工具有新版本</h2>
           </div>
+          <div class="summary-list" data-od-id="summary-list">
+            <span data-od-id="summary-item-1">懿美曲谱 → v2.32</span>
+            <span data-od-id="summary-item-2">一键清理 → v1.9</span>
+          </div>
+          <button class="btn btn-primary" data-toast="开始升级全部应用" data-od-id="upgrade-all-btn">全部升级</button>
         </div>
 
         <!-- 下载任务 + 已安装 -->
-        <section class="manage-panel">
+        <section class="manage-panel" data-od-id="manage-panel">
           <!-- 下载任务 -->
-          <div class="panel">
-            <div class="section-head"><h2>下载任务</h2></div>
-            <div class="settings-list">
-              <div class="download-card">
-                <span class="rank-icon brand-img" style="background:#285CF6"><img src="../assets/leishi-kge-appicon.png" alt="雷石 K 歌"></span>
-                <div class="download-info">
-                  <strong>雷石 K 歌</strong>
-                  <div class="progress-bar"><div class="progress-fill" style="width:68%"></div></div>
-                  <span class="download-meta">正在下载素材包 · 剩余 18 MB</span>
+          <div class="panel" data-od-id="download-panel">
+            <div class="section-head" data-od-id="download-header"><h2 data-od-id="download-title">下载任务</h2></div>
+            <div class="settings-list" data-od-id="download-list">
+              <div class="download-card" data-od-id="download-card-1">
+                <span class="rank-icon brand-img" style="background:#285CF6" data-od-id="download-icon-1"><img src="../assets/leishi-kge-appicon.png" alt="雷石 K 歌"></span>
+                <div class="download-info" data-od-id="download-info-1">
+                  <strong data-od-id="download-name-1">雷石 K 歌</strong>
+                  <div class="progress-bar" data-od-id="progress-bar-1"><div class="progress-fill" style="width:68%" data-od-id="progress-fill-1"></div></div>
+                  <span class="download-meta" data-od-id="download-meta-1">正在下载素材包 · 剩余 18 MB</span>
                 </div>
-                <span class="download-percent">68%</span>
+                <span class="download-percent" data-od-id="download-percent-1">68%</span>
               </div>
-              <div class="download-card">
-                <span class="rank-icon brand-img" style="background:#20C66A"><img src="../assets/app-icons/qq-music.jpg" alt="QQ音乐TV版"></span>
-                <div class="download-info">
-                  <strong>QQ音乐TV版</strong>
-                  <div class="progress-bar"><div class="progress-fill paused" style="width:32%"></div></div>
-                  <span class="download-meta">等待 Wi‑Fi 网络</span>
+              <div class="download-card" data-od-id="download-card-2">
+                <span class="rank-icon brand-img" style="background:#20C66A" data-od-id="download-icon-2"><img src="../assets/app-icons/qq-music.jpg" alt="QQ音乐TV版"></span>
+                <div class="download-info" data-od-id="download-info-2">
+                  <strong data-od-id="download-name-2">QQ音乐TV版</strong>
+                  <div class="progress-bar" data-od-id="progress-bar-2"><div class="progress-fill paused" style="width:32%" data-od-id="progress-fill-2"></div></div>
+                  <span class="download-meta" data-od-id="download-meta-2">等待 Wi‑Fi 网络</span>
                 </div>
-                <span class="download-percent paused">暂停</span>
+                <span class="download-percent paused" data-od-id="download-percent-2">暂停</span>
               </div>
             </div>
           </div>
 
           <!-- 已安装 -->
-          <div class="panel">
-            <div class="section-head">
-              <h2>已安装</h2>
-              <div class="segmented">
-                <button class="active" data-segment="all">全部</button>
-                <button data-segment="installed">已装</button>
-                <button data-segment="update">升级</button>
+          <div class="panel" data-od-id="installed-panel">
+            <div class="section-head" data-od-id="installed-header">
+              <h2 data-od-id="installed-title">已安装</h2>
+              <div class="segmented" data-od-id="installed-segmented">
+                <button class="active" data-segment="all" data-od-id="installed-filter-all">全部</button>
+                <button data-segment="installed" data-od-id="installed-filter-installed">已装</button>
+                <button data-segment="update" data-od-id="installed-filter-update">升级</button>
               </div>
             </div>
-            <div class="app-grid" data-update-list></div>
+            <div class="app-grid" data-update-list data-od-id="installed-grid"></div>
           </div>
         </section>
       </section>
     </main>
   </div>
-  <div class="toast" data-toast-box></div>
+  <div class="toast" data-toast-box data-od-id="toast"></div>
   </div>
   <script src="../assets/app.js"></script>
   <script>initPage('管理');</script>

@@ -7,35 +7,35 @@
   <link rel="stylesheet" href="assets/system.css">
 </head>
 <body>
-  <div id="app">
-  <div class="shell" data-shell>
-    <main class="main home-main">
+  <div id="app" data-od-id="app-root">
+  <div class="shell" data-shell data-od-id="shell">
+    <main class="main home-main" data-od-id="main-content">
 
       <!-- 今日推荐 - 编辑精选大卡 -->
-      <section class="editor-pick" data-editor-pick></section>
+      <section class="editor-pick" data-editor-pick data-od-id="editor-pick-section"></section>
 
       <!-- 精选应用 - 横向滚动 -->
-      <section class="curated-section">
-        <div class="section-head">
-          <h2>精选应用</h2>
+      <section class="curated-section" data-od-id="curated-section">
+        <div class="section-head" data-od-id="curated-header">
+          <h2 data-od-id="curated-title">精选应用</h2>
         </div>
-        <div class="curated-scroll" data-curated></div>
+        <div class="curated-scroll" data-curated data-od-id="curated-scroll"></div>
       </section>
 
       <!-- 场景推荐 -->
-      <section class="scene-section" data-scenes></section>
+      <section class="scene-section" data-scenes data-od-id="scene-section"></section>
 
       <!-- 排行榜 -->
-      <section class="charts-section">
-        <div class="section-head">
-          <h2>排行榜</h2>
+      <section class="charts-section" data-od-id="charts-section">
+        <div class="section-head" data-od-id="charts-header">
+          <h2 data-od-id="charts-title">排行榜</h2>
         </div>
-        <div class="charts-grid" data-charts></div>
+        <div class="charts-grid" data-charts data-od-id="charts-grid"></div>
       </section>
 
     </main>
   </div>
-  <div class="toast" data-toast-box></div>
+  <div class="toast" data-toast-box data-od-id="toast"></div>
   </div>
   <script src="assets/app.js"></script>
   <script>initPage('推荐');</script>

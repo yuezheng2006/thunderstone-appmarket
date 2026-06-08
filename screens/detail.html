@@ -3,71 +3,179 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <title>雷石 K 歌 · ThunderStone 应用市场</title>
+  <title>应用详情 · ThunderStone 应用市场</title>
   <link rel="stylesheet" href="../assets/system.css">
 </head>
 <body>
   <div id="app">
   <div class="shell" data-shell>
-    <main class="main">
-      <!-- 应用头部 -->
-      <section class="detail-hero glass">
-        <div class="detail-icon" style="background:#285CF6"><img src="../assets/leishi-kge-appicon.png" alt="雷石 K 歌"></div>
-        <div class="detail-copy">
-          <div class="detail-badges">
-            <span class="tag hot">编辑推荐</span>
-          </div>
-          <h1>雷石 K 歌</h1>
-          <p class="detail-editor-note">"客厅 K 歌体验标杆，双麦评分让全家都能参与。"</p>
-          <p>为智能 K 歌音箱优化的家庭欢唱应用。支持双麦评分、MV 背景、练唱模式和大屏点歌。</p>
-          <div class="stat-row">
-            <div class="stat-pill"><strong>4.9</strong><span>评分</span></div>
-            <div class="stat-pill"><strong>186 MB</strong><span>大小</span></div>
-            <div class="stat-pill"><strong>v5.8.2</strong><span>版本</span></div>
-          </div>
-        </div>
-        <div class="detail-actions">
-          <button class="btn btn-primary" data-toast="雷石 K 歌 已打开">打开</button>
-          <button class="btn btn-ghost" data-toast="已加入收藏">收藏</button>
-        </div>
-      </section>
-
-      <!-- 截图和同类 -->
-      <section class="grid">
-        <div class="panel span-8">
-          <div class="section-head"><h2>功能亮点</h2></div>
-          <div class="screenshot-grid">
-            <div class="shot"><strong>点歌台</strong><p>热门、已唱、收藏一屏切换</p></div>
-            <div class="shot"><strong>双麦评分</strong><p>实时音准和节奏反馈</p></div>
-            <div class="shot"><strong>派对歌单</strong><p>家庭聚会自动接唱</p></div>
-          </div>
-        </div>
-        <aside class="rank-board span-4">
-          <div class="section-head"><h2>同类精选</h2></div>
-          <div class="rank-list">
-            <a class="rank-row" href="#"><span class="rank-no">1</span><span class="rank-icon brand-img" style="background:#D85B38"><img src="../assets/app-icons/songbook.svg" alt="懿美曲谱"></span><strong>懿美曲谱</strong><span class="stars">★ 4.8</span></a>
-            <a class="rank-row" href="#"><span class="rank-no">2</span><span class="rank-icon brand-img" style="background:#20C66A"><img src="../assets/app-icons/qq-music.jpg" alt="QQ音乐TV版"></span><strong>QQ音乐TV版</strong><span class="stars">★ 4.7</span></a>
-            <a class="rank-row" href="#"><span class="rank-no">3</span><span class="rank-icon brand-img" style="background:#E84452"><img src="../assets/app-icons/hot-dance.jpg" alt="热舞型动"></span><strong>热舞型动</strong><span class="stars">★ 4.6</span></a>
-          </div>
-        </aside>
-      </section>
-
-      <!-- 更新日志 -->
-      <section class="panel section-block">
-        <div class="section-head">
-          <h2>更新记录</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-card"><strong>v5.8.2 · 2024.12</strong><p>新增家庭派对歌单、儿童锁和双麦延迟校准。</p></div>
-          <div class="timeline-card"><strong>v5.8.0 · 2024.11</strong><p>全新点歌台界面，封面和歌词更适合远距离观看。</p></div>
-          <div class="timeline-card"><strong>v5.7.6 · 2024.09</strong><p>修复蓝牙音频延迟问题，新增练唱模式回放。</p></div>
-        </div>
-      </section>
+    <main class="main" data-detail-main>
+      <!-- 动态内容将在这里渲染 -->
     </main>
   </div>
   <div class="toast" data-toast-box></div>
   </div>
   <script src="../assets/app.js"></script>
-  <script>initPage('音乐');</script>
+  <script>
+    // 动态渲染详情页
+    (function() {
+      const params = new URLSearchParams(location.search);
+      const appId = params.get('id');
+      const app = marketApps.find(a => a.id === appId);
+
+      if (!app) {
+        location.href = '../index.html';
+        return;
+      }
+
+      document.title = `${app.name} · ThunderStone 应用市场`;
+
+      const main = document.querySelector('[data-detail-main]');
+      const imgSrc = app.brand === 'image' ? `../${app.image}` : '';
+      const iconStyle = app.brand === 'image' ? '' : `style="background:${app.color}"`;
+
+      // 获取同类应用（排除当前应用）
+      const relatedApps = marketApps
+        .filter(a => a.category === app.category && a.id !== app.id && a.verified)
+        .slice(0, 3);
+
+      const relatedHtml = relatedApps.map((a, i) => {
+        const relatedImgSrc = a.brand === 'image' ? `../${a.image}` : '';
+        const relatedIconStyle = a.brand === 'image' ? '' : `style="background:${a.color}"`;
+        return `<a class="rank-row" href="detail.html?id=${a.id}"><span class="rank-no">${i + 1}</span><span class="rank-icon brand-img" ${relatedIconStyle}>${relatedImgSrc ? `<img src="${relatedImgSrc}" alt="${a.name}">` : ''}</span><strong>${a.name}</strong><span class="stars">★ ${a.rating}</span></a>`;
+      }).join('');
+
+      // 生成功能亮点（根据应用类型）
+      const features = generateFeatures(app);
+      const featuresHtml = features.map(f => `<div class="shot"><strong>${f.title}</strong><p>${f.desc}</p></div>`).join('');
+
+      // 生成更新日志
+      const updates = generateUpdates(app);
+      const updatesHtml = updates.map(u => `<div class="timeline-card"><strong>${u.version} · ${u.date}</strong><p>${u.note}</p></div>`).join('');
+
+      // 按钮文案
+      let actionLabel = app.installed ? '打开' : '安装';
+      if (app.installed && app.update) actionLabel = '更新';
+
+      main.innerHTML = `
+        <!-- 应用头部 -->
+        <section class="detail-hero glass">
+          <div class="detail-icon" ${iconStyle}>${imgSrc ? `<img src="${imgSrc}" alt="${app.name}">` : ''}</div>
+          <div class="detail-copy">
+            <div class="detail-badges">
+              ${app.hot ? '<span class="tag hot">编辑推荐</span>' : ''}
+              ${app.verified ? '<span class="tag">官方认证</span>' : ''}
+              ${app.isNew ? '<span class="tag">新品</span>' : ''}
+            </div>
+            <h1>${app.name}</h1>
+            ${app.editorNote ? `<p class="detail-editor-note">"${app.editorNote}"</p>` : ''}
+            <p>${app.desc}</p>
+            <div class="stat-row">
+              <div class="stat-pill"><strong>${app.rating}</strong><span>评分</span></div>
+              <div class="stat-pill"><strong>${app.size}</strong><span>大小</span></div>
+              <div class="stat-pill"><strong>v${app.version}</strong><span>版本</span></div>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <button class="btn btn-primary" data-toast="${app.name} ${actionLabel === '安装' ? '开始下载' : actionLabel === '更新' ? '开始更新' : '已打开'}">${actionLabel}</button>
+            <button class="btn btn-ghost" data-toast="已加入收藏">收藏</button>
+          </div>
+        </section>
+
+        <!-- 截图和同类 -->
+        <section class="grid">
+          <div class="panel span-8">
+            <div class="section-head"><h2>功能亮点</h2></div>
+            <div class="screenshot-grid">${featuresHtml}</div>
+          </div>
+          <aside class="rank-board span-4">
+            <div class="section-head"><h2>同类精选</h2></div>
+            <div class="rank-list">${relatedHtml || '<p style="padding:1rem;color:var(--muted)">暂无推荐</p>'}</div>
+          </aside>
+        </section>
+
+        <!-- 更新日志 -->
+        <section class="panel section-block">
+          <div class="section-head">
+            <h2>更新记录</h2>
+          </div>
+          <div class="timeline">${updatesHtml}</div>
+        </section>
+      `;
+
+      initPage(app.category);
+    })();
+
+    // 根据应用类型生成功能亮点
+    function generateFeatures(app) {
+      const categoryFeatures = {
+        '音乐': [
+          { title: '海量曲库', desc: '百万正版歌曲随心听' },
+          { title: '智能推荐', desc: '根据喜好推荐歌单' },
+          { title: '高品质音效', desc: '支持无损音质播放' }
+        ],
+        '影音': [
+          { title: '4K 超清', desc: '支持 4K HDR 画质' },
+          { title: '海量片库', desc: '电影、剧集、综艺全覆盖' },
+          { title: '智能推荐', desc: '个性化内容推荐' }
+        ],
+        '儿童': [
+          { title: '分龄内容', desc: '适合不同年龄段的内容' },
+          { title: '家长控制', desc: '观看时长和内容管理' },
+          { title: '寓教于乐', desc: '启蒙教育与娱乐结合' }
+        ],
+        '健身': [
+          { title: '专业课程', desc: '多种健身课程可选' },
+          { title: '大屏跟练', desc: '动作清晰易跟随' },
+          { title: '数据记录', desc: '运动数据实时反馈' }
+        ],
+        '戏曲': [
+          { title: '经典剧目', desc: '名家名段精选' },
+          { title: '高清画质', desc: '舞台效果完整呈现' },
+          { title: '字幕同步', desc: '唱词字幕清晰显示' }
+        ],
+        '工具': [
+          { title: '简单易用', desc: '操作简单上手快' },
+          { title: '功能实用', desc: '解决实际使用需求' },
+          { title: '稳定可靠', desc: '运行稳定不卡顿' }
+        ],
+        '娱乐': [
+          { title: '内容丰富', desc: '多种娱乐内容可选' },
+          { title: '互动体验', desc: '支持多人互动' },
+          { title: '定期更新', desc: '持续更新新内容' }
+        ]
+      };
+
+      return categoryFeatures[app.category] || [
+        { title: '核心功能', desc: app.desc.split('、')[0] || '优质体验' },
+        { title: '易用性', desc: '操作简单，上手快' },
+        { title: '稳定性', desc: '运行流畅，体验好' }
+      ];
+    }
+
+    // 生成更新日志
+    function generateUpdates(app) {
+      const currentYear = 2024;
+      const currentMonth = 12;
+
+      return [
+        {
+          version: `v${app.version}`,
+          date: `${currentYear}.${String(currentMonth).padStart(2, '0')}`,
+          note: `优化用户体验，修复已知问题。`
+        },
+        {
+          version: `v${parseFloat(app.version) - 0.1}`,
+          date: `${currentYear}.${String(currentMonth - 1).padStart(2, '0')}`,
+          note: `新增功能，提升性能表现。`
+        },
+        {
+          version: `v${parseFloat(app.version) - 0.2}`,
+          date: `${currentYear}.${String(currentMonth - 2).padStart(2, '0')}`,
+          note: `界面优化，修复部分bug。`
+        }
+      ];
+    }
+  </script>
 </body>
 </html>

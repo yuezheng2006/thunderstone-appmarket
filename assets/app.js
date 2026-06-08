@@ -7,22 +7,34 @@ const marketApps = [
   { id: 'dance', name: '热舞型动', icon: 'flame', color: '#E84452', brand: 'image', image: 'assets/app-icons/hot-dance.jpg', category: '健身', status: '推荐', version: '3.6', installed: false, update: false, rating: '4.6', size: '156 MB', desc: '客厅跟跳、燃脂课程、K歌派对热身。', isNew: true, verified: true, editorNote: '聚会暖场神器，跟跳模式适合全年龄。' },
   { id: 'tangdou', name: '糖豆广场舞', icon: 'star', color: '#F0A51D', brand: 'image', image: 'assets/app-icons/tangdou.jpg', category: '娱乐', status: '榜单', version: '8.4', installed: false, update: false, rating: '4.5', size: '144 MB', desc: '热门广场舞、分步教学、亲友投屏。', hot: true, verified: true },
   { id: 'yangshipin', name: '央视频TV版', icon: 'tv', color: '#D8242F', brand: 'image', image: 'assets/app-icons/yangshipin.jpg', category: '影音', status: '精选', version: '6.2', installed: true, update: false, rating: '4.6', size: '98 MB', desc: '演唱会、综艺、体育直播和新闻频道。', verified: true },
+  { id: 'yingniuniu', name: '影牛牛', icon: 'play', color: '#1A5BFF', brand: 'image', image: 'assets/app-icons/yingniuniu.png', category: '影音', status: '影院', version: '230321', installed: false, update: false, rating: '4.4', size: '18 MB', desc: '3D 影片、家庭影院片库、即点即播。', hot: true, verified: true, editorNote: '适合家庭影院和大屏观影场景，内容定位清晰。' },
   { id: 'wukong', name: '悟空识字', icon: 'book-open', color: '#16A35B', brand: 'image', image: 'assets/app-icons/wukong-literacy.jpg', category: '儿童', status: '亲子', version: '4.1', installed: false, update: false, rating: '4.8', size: '112 MB', desc: '儿童识字、互动故事、亲子陪伴。', isNew: true, verified: true, editorNote: '互动识字游戏，适合 3-8 岁亲子共学。' },
-  { id: 'clean', name: '一键清理TV版', icon: 'trash-2', color: '#4F6478', brand: 'image', image: 'assets/app-icons/tv-cleaner.svg', category: '工具', status: '已安装', version: '1.9', installed: true, update: true, rating: '4.3', size: '38 MB', desc: '清理缓存、释放空间、下载前自动检测。', verified: true }
+  { id: 'clean', name: '一键清理TV版', icon: 'trash-2', color: '#4F6478', brand: 'image', image: 'assets/app-icons/tv-cleaner.svg', category: '工具', status: '已安装', version: '1.9', installed: true, update: true, rating: '4.3', size: '38 MB', desc: '清理缓存、释放空间、下载前自动检测。', verified: true },
+  { id: 'kugou', name: '酷狗音乐TV版', icon: 'headphones', color: '#2B8BED', category: '音乐', status: '热门', version: '6.5', installed: false, update: false, rating: '4.6', size: '108 MB', desc: '蝰蛇音效、歌词投屏、智能推荐歌单。', hot: true, verified: true },
+  { id: 'bilibili', name: '哔哩哔哩TV版', icon: 'play', color: '#FB7299', category: '影音', status: '热门', version: '1.8', installed: false, update: false, rating: '4.7', size: '142 MB', desc: '番剧、纪录片、UP主创作和弹幕互动。', hot: true, verified: true, editorNote: '年轻人的客厅娱乐首选。' },
+  { id: 'youku', name: '优酷TV版', icon: 'play', color: '#1EBEA5', category: '影音', status: '精选', version: '10.2', installed: false, update: false, rating: '4.4', size: '136 MB', desc: '独播剧集、综艺、4K 超清和杜比音效。', verified: true },
+  { id: 'keep', name: 'Keep TV版', icon: 'flame', color: '#35C759', category: '健身', status: '推荐', version: '2.4', installed: false, update: false, rating: '4.7', size: '98 MB', desc: '瑜伽、HIIT、拉伸课程，大屏跟练。', isNew: true, verified: true, editorNote: '居家健身最佳搭档，课程丰富。' },
+  { id: 'ximalaya', name: '喜马拉雅TV版', icon: 'headphones', color: '#F5623A', brand: 'image', image: 'assets/app-icons/ximalaya.svg', category: '娱乐', status: '精选', version: '5.3', installed: false, update: false, rating: '4.5', size: '76 MB', desc: '有声书、播客、助眠白噪音和儿童故事。', verified: true },
+  { id: 'babybus', name: '宝宝巴士', icon: 'heart', color: '#FF6B9D', brand: 'image', image: 'assets/app-icons/babybus.jpg', category: '儿童', status: '亲子', version: '7.8', installed: false, update: false, rating: '4.9', size: '168 MB', desc: '启蒙动画、益智游戏、儿歌和安全教育。', hot: true, verified: true, editorNote: '0-6 岁启蒙内容最全面的儿童应用。' },
+  { id: 'xiquduoduo', name: '戏曲多多', icon: 'music', color: '#E23C54', brand: 'image', image: 'assets/app-icons/xiqu-duoduo.jpg', category: '戏曲', status: '精选', version: '3.9', installed: false, update: false, rating: '4.7', size: '86 MB', desc: '豫剧、京剧、黄梅戏、相声评书一站收听。', hot: true, verified: true, editorNote: '给长辈和戏曲爱好者的客厅戏台。' },
+  { id: 'liyuan', name: '梨园行戏曲', icon: 'music', color: '#B83A2B', brand: 'image', image: 'assets/app-icons/liyuan-opera.jpg', category: '戏曲', status: '经典', version: '2.6', installed: false, update: false, rating: '4.6', size: '64 MB', desc: '经典地方戏曲、名家唱段、听戏看戏曲库。', verified: true },
+  { id: 'screencast', name: '乐播投屏', icon: 'zap', color: '#6366F1', category: '工具', status: '实用', version: '9.1', installed: false, update: false, rating: '4.4', size: '42 MB', desc: '手机投屏、镜像显示、会议演示。', verified: true },
+  { id: 'weather', name: '天气预报TV版', icon: 'moon', color: '#0EA5E9', category: '工具', status: '实用', version: '3.2', installed: true, update: false, rating: '4.2', size: '24 MB', desc: '7日天气、空气质量、穿衣建议。', verified: true }
 ];
 
-const categories = ['推荐', '音乐', '影音', '娱乐', '儿童', '健身', '工具'];
+const categories = ['推荐', '音乐', '影音', '娱乐', '儿童', '戏曲', '健身', '工具'];
 
 // 场景分组
 const scenes = [
-  { name: '家庭聚会', icon: 'zap', apps: ['thunderktv', 'dance', 'qqmusic'] },
-  { name: '亲子时光', icon: 'heart', apps: ['wukong', 'tangdou', 'yangshipin'] },
-  { name: '独处放松', icon: 'moon', apps: ['songbook', 'yangshipin', 'qqmusic'] }
+  { name: '家庭聚会', icon: 'zap', apps: ['thunderktv', 'dance', 'qqmusic', 'xiquduoduo'] },
+  { name: '亲子时光', icon: 'heart', apps: ['wukong', 'babybus', 'yangshipin'] },
+  { name: '独处放松', icon: 'moon', apps: ['ximalaya', 'bilibili', 'yingniuniu'] }
 ];
 
 /* ======== 画布缩放 ======== */
 function setupStageScale() {
   const root = document.documentElement;
+  const appEl = document.getElementById('app');
   const designW = 1280, designH = 720, maxScale = 1.12;
   function apply() {
     const vp = window.visualViewport;
@@ -30,6 +42,7 @@ function setupStageScale() {
     const h = Math.round(vp?.height || window.innerHeight);
     const s = Math.min(maxScale, Math.min(w / designW, h / designH));
     root.style.setProperty('--stage-scale', Math.max(0.1, s).toFixed(4));
+    if (appEl && !appEl.style.opacity) appEl.style.opacity = '1';
   }
   apply();
   if (!window.__stageScaleBound) {
@@ -61,7 +74,12 @@ function iconSvg(name, size) {
     shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
     refresh: '<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>',
     play: '<polygon points="5 3 19 12 5 21 5 3"/>',
-    'trash-2': '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>'
+    'trash-2': '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>',
+    mic: '<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>',
+    headphones: '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>',
+    tv: '<rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/>',
+    music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+    'book-open': '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>'
   };
   return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" ${s}>${p[name] || p.grid}</svg>`;
 }
@@ -88,62 +106,90 @@ function renderChrome(active) {
   const isManage = path.includes('/manage.html');
   const isUsers = path.includes('/users.html');
 
-  const catTabs = categories.map(cat => {
+  const catTabs = categories.map((cat, idx) => {
     const isRecommend = cat === '推荐';
     const href = isRecommend
       ? `${base}index.html`
       : `${isCatalog ? '' : base + 'screens/catalog.html'}?cat=${cat}`;
-    return `<a href="${href}" class="cat-tab${active === cat ? ' active' : ''}" data-cat-tab="${cat}">${cat}</a>`;
+    return `<a href="${href}" class="cat-tab${active === cat ? ' active' : ''}" data-cat-tab="${cat}" data-od-id="cat-tab-${idx}">${cat}</a>`;
   }).join('');
 
   return `
-    <header class="topnav">
-      <a class="brand-mark" href="${base}index.html">
-        <img src="${base}assets/thunderstone-logo.png" alt="ThunderStone" class="brand-logo">
+    <header class="topnav" data-od-id="topnav">
+      <a class="brand-mark" href="${base}index.html" data-od-id="brand-mark">
+        <img src="${base}assets/thunderstone-logo.png" alt="ThunderStone" class="brand-logo" data-od-id="brand-logo">
       </a>
-      <nav class="cat-tabs" aria-label="分类导航">${catTabs}</nav>
-      <div class="top-actions">
-        <button class="btn-search" data-open-search>${iconSvg('search')}<span>搜索应用</span></button>
+      <nav class="cat-tabs" aria-label="分类导航" data-od-id="cat-tabs">${catTabs}</nav>
+      <div class="top-actions" data-od-id="top-actions">
+        <button class="btn-search" data-open-search data-od-id="search-btn">${iconSvg('search')}<span>搜索应用</span></button>
       </div>
     </header>
-    <nav class="bottom-dock" aria-label="底部导航">
-      <a class="dock-btn${isHome || isCatalog ? ' active' : ''}" href="${base}index.html">${iconSvg('home')}<span>推荐</span></a>
-      <a class="dock-btn${isManage ? ' active' : ''}" href="${base}screens/manage.html">${iconSvg('down')}<span>管理</span></a>
-      <a class="dock-btn${isUsers ? ' active' : ''}" href="${base}screens/users.html">${iconSvg('user')}<span>我的</span></a>
+    <nav class="bottom-dock" aria-label="底部导航" data-od-id="bottom-dock">
+      <a class="dock-btn${isHome || isCatalog ? ' active' : ''}" href="${base}index.html" data-od-id="dock-home">${iconSvg('home')}<span>推荐</span></a>
+      <a class="dock-btn${isManage ? ' active' : ''}" href="${base}screens/manage.html" data-od-id="dock-manage">${iconSvg('down')}<span>管理</span></a>
+      <a class="dock-btn${isUsers ? ' active' : ''}" href="${base}screens/users.html" data-od-id="dock-users">${iconSvg('user')}<span>我的</span></a>
     </nav>`;
 }
 
-/* ======== 编辑精选大卡（今日推荐） ======== */
+/* ======== Banner 轮播（今日推荐） ======== */
 function renderEditorPick() {
   const target = document.querySelector('[data-editor-pick]');
   if (!target) return;
-  const app = marketApps[0]; // 雷石 K 歌
   const inScreens = location.pathname.includes('/screens/');
   const base = inScreens ? '../' : '';
+  const bannerApps = marketApps.filter(a => a.editorNote).slice(0, 4);
+
+  const slides = bannerApps.map((app, i) => `
+    <a class="banner-slide${i === 0 ? ' active' : ''}" data-slide="${i}" href="${base}screens/detail.html?id=${app.id}" aria-label="查看 ${app.name} 详情" data-od-id="banner-slide-${i}">
+      <div class="banner-media" data-od-id="banner-media-${i}">
+        <div class="banner-orb" data-od-id="banner-orb-${i}"></div>
+        <div class="banner-icon" data-od-id="banner-icon-${i}">
+          <img src="${base}${app.brand === 'image' ? app.image : ''}" alt="${app.name}" data-od-id="banner-img-${i}">
+        </div>
+      </div>
+      <div class="banner-info" data-od-id="banner-info-${i}">
+        <span class="banner-kicker" data-od-id="banner-kicker-${i}">今日推荐</span>
+        <h2 class="banner-title" data-od-id="banner-title-${i}">${app.name}</h2>
+        <p class="banner-note" data-od-id="banner-note-${i}">${app.editorNote}</p>
+        <div class="banner-meta" data-od-id="banner-meta-${i}">
+          <span class="banner-rating" data-od-id="banner-rating-${i}">★ ${app.rating}</span>
+          <span data-od-id="banner-size-${i}">${app.size}</span>
+          <span data-od-id="banner-category-${i}">${app.category}</span>
+        </div>
+      </div>
+      <div class="banner-action" data-od-id="banner-action-${i}">
+        <span class="btn btn-primary" data-od-id="banner-btn-${i}">查看详情</span>
+      </div>
+    </a>`).join('');
+
+  const dots = bannerApps.map((_, i) =>
+    `<button class="banner-dot${i === 0 ? ' active' : ''}" data-dot="${i}" data-od-id="banner-dot-${i}"></button>`
+  ).join('');
+
   target.innerHTML = `
-    <div class="editor-card">
-      <div class="editor-card-content">
-        <div class="editor-label">
-          ${iconSvg('sparkle')}
-          <span>今日推荐</span>
-        </div>
-        <h1 class="editor-title">${app.name}</h1>
-        <p class="editor-note">"${app.editorNote}"</p>
-        <div class="editor-meta">
-          <span>★ ${app.rating}</span>
-          <span>${app.size}</span>
-        </div>
-        <div class="editor-actions">
-          <button class="btn btn-primary" data-toast="${app.name} 开始下载">${app.installed ? '打开' : '安装'}</button>
-          <a class="btn btn-ghost" href="${base}screens/detail.html?id=${app.id}">了解更多</a>
-        </div>
-      </div>
-      <div class="editor-card-visual">
-        <div class="editor-icon">
-          <img src="${base}${app.image}" alt="${app.name}">
-        </div>
-      </div>
+    <div class="banner-carousel" data-od-id="banner-carousel">
+      <div class="banner-track" data-od-id="banner-track">${slides}</div>
+      <div class="banner-dots" data-od-id="banner-dots">${dots}</div>
     </div>`;
+
+  // 轮播逻辑
+  let current = 0;
+  const total = bannerApps.length;
+  const track = target.querySelector('.banner-track');
+  const allDots = target.querySelectorAll('.banner-dot');
+  const allSlides = target.querySelectorAll('.banner-slide');
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    allSlides.forEach((s, i) => s.classList.toggle('active', i === current));
+    allDots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  allDots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.dot)));
+
+  let timer = setInterval(() => goTo(current + 1), 5000);
+  target.addEventListener('pointerenter', () => clearInterval(timer));
+  target.addEventListener('pointerleave', () => { timer = setInterval(() => goTo(current + 1), 5000); });
 }
 
 /* ======== 精选应用横向滚动 ======== */
@@ -152,15 +198,15 @@ function renderCurated() {
   if (!target) return;
   const inScreens = location.pathname.includes('/screens/');
   const base = inScreens ? '../' : '';
-  const picks = marketApps.filter(a => a.verified).slice(0, 6);
-  target.innerHTML = picks.map(app => `
-    <a class="curated-card" href="${base}screens/detail.html?id=${app.id}">
+  // 排除已在推荐位出现的应用
+  const bannerIds = marketApps.filter(a => a.editorNote).slice(0, 4).map(a => a.id);
+  const picks = marketApps.filter(a => a.verified && !bannerIds.includes(a.id)).slice(0, 6);
+  target.innerHTML = picks.map((app, i) => `
+    <a class="curated-card" href="${base}screens/detail.html?id=${app.id}" data-od-id="curated-card-${i}">
       ${appBrandIcon(app, 'lg')}
-      <div class="curated-info">
-        <strong>${app.name}</strong>
-        <span class="curated-meta">${app.category}</span>
+      <div class="curated-info" data-od-id="curated-info-${i}">
+        <strong data-od-id="curated-name-${i}">${app.name}</strong>
       </div>
-      ${app.editorNote ? `<p class="curated-note">${app.editorNote.slice(0, 16)}…</p>` : ''}
     </a>`).join('');
 }
 
@@ -170,20 +216,20 @@ function renderScenes() {
   if (!target) return;
   const inScreens = location.pathname.includes('/screens/');
   const base = inScreens ? '../' : '';
-  target.innerHTML = scenes.map(scene => {
+  target.innerHTML = scenes.map((scene, si) => {
     const apps = scene.apps.map(id => marketApps.find(a => a.id === id)).filter(Boolean);
-    const appCards = apps.map(app => `
-      <a class="scene-app" href="${base}screens/detail.html?id=${app.id}">
+    const appCards = apps.map((app, ai) => `
+      <a class="scene-app" href="${base}screens/detail.html?id=${app.id}" data-od-id="scene-app-${si}-${ai}">
         ${appBrandIcon(app, 'sm')}
-        <span>${app.name}</span>
+        <span data-od-id="scene-app-name-${si}-${ai}">${app.name}</span>
       </a>`).join('');
     return `
-      <div class="scene-block">
-        <div class="scene-header">
+      <div class="scene-block" data-od-id="scene-block-${si}">
+        <div class="scene-header" data-od-id="scene-header-${si}">
           ${iconSvg(scene.icon)}
-          <h3>${scene.name}</h3>
+          <h3 data-od-id="scene-title-${si}">${scene.name}</h3>
         </div>
-        <div class="scene-apps">${appCards}</div>
+        <div class="scene-apps" data-od-id="scene-apps-${si}">${appCards}</div>
       </div>`;
   }).join('');
 }
@@ -192,27 +238,31 @@ function renderScenes() {
 function renderCharts() {
   const target = document.querySelector('[data-charts]');
   if (!target) return;
+  const inScreens = location.pathname.includes('/screens/');
+  const base = inScreens ? '../' : '';
   const hotApps = marketApps.filter(a => a.hot).slice(0, 3);
   const newApps = marketApps.filter(a => a.isNew).slice(0, 3);
 
-  function chartColumn(title, icon, apps) {
+  function chartColumn(title, icon, apps, colId) {
     const rows = apps.map((app, i) => `
-      <div class="chart-row">
-        <span class="chart-rank">${i + 1}</span>
+      <a class="chart-row" href="${base}screens/detail.html?id=${app.id}" data-od-id="chart-row-${colId}-${i}">
+        <span class="chart-rank" data-od-id="chart-rank-${colId}-${i}">${i + 1}</span>
         ${appBrandIcon(app, 'sm')}
-        <div class="chart-info">
-          <strong>${app.name}</strong>
-          <span>${app.category} · ★ ${app.rating}</span>
+        <div class="chart-info" data-od-id="chart-info-${colId}-${i}">
+          <strong data-od-id="chart-name-${colId}-${i}">${app.name}</strong>
+          <span data-od-id="chart-meta-${colId}-${i}">${app.category} · ★ ${app.rating}</span>
         </div>
-      </div>`).join('');
-    return `<div class="chart-col"><div class="chart-header">${iconSvg(icon)}<h3>${title}</h3></div>${rows}</div>`;
+      </a>`).join('');
+    return `<div class="chart-col" data-od-id="chart-col-${colId}"><div class="chart-header" data-od-id="chart-header-${colId}">${iconSvg(icon)}<h3 data-od-id="chart-title-${colId}">${title}</h3></div>${rows}</div>`;
   }
 
-  target.innerHTML = chartColumn('热门榜', 'flame', hotApps) + chartColumn('新品榜', 'sparkle', newApps);
+  target.innerHTML = chartColumn('热门榜', 'flame', hotApps, 'hot') + chartColumn('新品榜', 'sparkle', newApps, 'new');
 }
 
 /* ======== 应用卡片（分类页用） ======== */
 function appCard(app) {
+  const inScreens = location.pathname.includes('/screens/');
+  const base = inScreens ? '' : 'screens/';
   let actionLabel, btnClass, actionIcon;
   if (app.installed && app.update) {
     actionLabel = '更新'; btnClass = 'btn-update'; actionIcon = 'refresh';
@@ -221,22 +271,22 @@ function appCard(app) {
   } else {
     actionLabel = '安装'; btnClass = 'btn-install'; actionIcon = 'down';
   }
-  const uninstallBtn = app.installed ? `<button class="btn btn-uninstall" data-uninstall="${app.id}">${iconSvg('trash-2')} 卸载</button>` : '';
+  const uninstallBtn = app.installed ? `<button class="btn btn-uninstall" data-uninstall="${app.id}" data-od-id="app-uninstall-${app.id}">${iconSvg('trash-2')} 卸载</button>` : '';
   return `
-    <article class="app-card" data-app-id="${app.id}" data-name="${app.name.toLowerCase()} ${app.desc.toLowerCase()}" data-category="${app.category}" data-installed="${app.installed}" data-update="${app.update}">
-      <div class="app-card-left">
+    <article class="app-card" data-app-id="${app.id}" data-name="${app.name.toLowerCase()} ${app.desc.toLowerCase()}" data-category="${app.category}" data-installed="${app.installed}" data-update="${app.update}" data-od-id="app-card-${app.id}">
+      <a class="app-card-left" href="${base}detail.html?id=${app.id}" data-od-id="app-card-left-${app.id}">
         ${appBrandIcon(app)}
-        <div class="app-copy">
-          <h3>${app.name}</h3>
-          <p class="app-desc">${app.desc}</p>
-          <div class="app-meta">
-            <span>★ ${app.rating}</span>
-            <span>${app.size}</span>
+        <div class="app-copy" data-od-id="app-copy-${app.id}">
+          <h3 data-od-id="app-name-${app.id}">${app.name}</h3>
+          <p class="app-desc" data-od-id="app-desc-${app.id}">${app.desc}</p>
+          <div class="app-meta" data-od-id="app-meta-${app.id}">
+            <span data-od-id="app-rating-${app.id}">★ ${app.rating}</span>
+            <span data-od-id="app-size-${app.id}">${app.size}</span>
           </div>
         </div>
-      </div>
-      <div class="app-card-right">
-        <button class="btn ${btnClass}" data-toast="${app.name} ${actionLabel === '安装' ? '开始下载' : actionLabel === '更新' ? '开始更新' : '已打开'}">${iconSvg(actionIcon)} ${actionLabel}</button>
+      </a>
+      <div class="app-card-right" data-od-id="app-card-right-${app.id}">
+        <button class="btn ${btnClass}" data-toast="${app.name} ${actionLabel === '安装' ? '开始下载' : actionLabel === '更新' ? '开始更新' : '已打开'}" data-od-id="app-action-${app.id}">${iconSvg(actionIcon)} ${actionLabel}</button>
         ${uninstallBtn}
       </div>
     </article>`;
@@ -249,8 +299,8 @@ function renderChips() {
   const target = document.querySelector('[data-category-chips]');
   if (!target) return;
   const urlCat = new URLSearchParams(location.search).get('cat') || '推荐';
-  target.innerHTML = categories.map(cat =>
-    `<button class="${cat === urlCat ? 'active' : ''}" data-chip-category="${cat}">${cat}</button>`
+  target.innerHTML = categories.map((cat, i) =>
+    `<button class="${cat === urlCat ? 'active' : ''}" data-chip-category="${cat}" data-od-id="chip-${i}">${cat}</button>`
   ).join('');
 }
 
@@ -297,9 +347,9 @@ function wireFilters() {
     const totalPages = Math.ceil(total / PAGE_SIZE);
     if (totalPages <= 1) { pager.innerHTML = ''; return; }
     pager.innerHTML = `
-      <button class="pager-btn" data-page-prev ${page <= 1 ? 'disabled' : ''}>${iconSvg('back')} 上一页</button>
-      <span class="pager-info">${page} / ${totalPages}</span>
-      <button class="pager-btn" data-page-next ${page >= totalPages ? 'disabled' : ''}>下一页</button>`;
+      <button class="pager-btn" data-page-prev ${page <= 1 ? 'disabled' : ''} data-od-id="pager-prev">${iconSvg('back')} 上一页</button>
+      <span class="pager-info" data-od-id="pager-info">${page} / ${totalPages}</span>
+      <button class="pager-btn" data-page-next ${page >= totalPages ? 'disabled' : ''} data-od-id="pager-next">下一页</button>`;
     pager.querySelector('[data-page-prev]')?.addEventListener('click', () => { if (currentPage > 1) { currentPage--; apply(); } });
     pager.querySelector('[data-page-next]')?.addEventListener('click', () => { const f = getFiltered(); if (currentPage < Math.ceil(f.length / PAGE_SIZE)) { currentPage++; apply(); } });
   }
@@ -395,13 +445,13 @@ function wireUninstall() {
     const imgSrc = appData.brand === 'image' ? (/^https?:/.test(appData.image) ? appData.image : `${base}${appData.image}`) : '';
 
     overlay.innerHTML = `
-      <div class="uninstall-dialog">
-        <div class="dialog-icon">${imgSrc ? `<img src="${imgSrc}" alt="${appData.name}">` : `<div style="width:100%;height:100%;background:${appData.color};border-radius:12px"></div>`}</div>
-        <h3>卸载「${appData.name}」？</h3>
-        <p>卸载后应用数据将被清除，确认继续？</p>
-        <div class="dialog-actions">
-          <button class="btn btn-open" data-dismiss-uninstall>取消</button>
-          <button class="btn btn-uninstall" data-confirm-uninstall="${appId}">确认卸载</button>
+      <div class="uninstall-dialog" data-od-id="uninstall-dialog">
+        <div class="dialog-icon" data-od-id="dialog-icon">${imgSrc ? `<img src="${imgSrc}" alt="${appData.name}" data-od-id="dialog-icon-img">` : `<div style="width:100%;height:100%;background:${appData.color};border-radius:12px" data-od-id="dialog-icon-placeholder"></div>`}</div>
+        <h3 data-od-id="dialog-title">卸载「${appData.name}」？</h3>
+        <p data-od-id="dialog-desc">卸载后应用数据将被清除，确认继续？</p>
+        <div class="dialog-actions" data-od-id="dialog-actions">
+          <button class="btn btn-open" data-dismiss-uninstall data-od-id="dialog-cancel">取消</button>
+          <button class="btn btn-uninstall" data-confirm-uninstall="${appId}" data-od-id="dialog-confirm">确认卸载</button>
         </div>
       </div>`;
     overlay.classList.add('show');
@@ -459,17 +509,17 @@ function wireSearch() {
     overlay = document.createElement('div');
     overlay.className = 'search-overlay';
     overlay.innerHTML = `
-      <div class="search-panel">
-        <div class="search-header">
-          <div class="search-input-wrap">
+      <div class="search-panel" data-od-id="search-panel">
+        <div class="search-header" data-od-id="search-header">
+          <div class="search-input-wrap" data-od-id="search-input-wrap">
             ${iconSvg('search')}
-            <input type="text" class="search-input" placeholder="搜索应用名称或功能…" autofocus>
-            <button class="search-close" data-close-search>取消</button>
+            <input type="text" class="search-input" placeholder="搜索应用名称或功能…" autofocus data-od-id="search-input">
+            <button class="search-close" data-close-search data-od-id="search-close">取消</button>
           </div>
         </div>
-        <div class="search-body">
-          <div class="search-hint">输入关键词搜索应用</div>
-          <div class="search-results" data-search-results></div>
+        <div class="search-body" data-od-id="search-body">
+          <div class="search-hint" data-od-id="search-hint">输入关键词搜索应用</div>
+          <div class="search-results" data-search-results data-od-id="search-results"></div>
         </div>
       </div>`;
     app.appendChild(overlay);
@@ -494,12 +544,12 @@ function wireSearch() {
       results.innerHTML = '<div class="search-empty">没有找到相关应用</div>';
       return;
     }
-    results.innerHTML = matched.map(app => `
-      <a class="search-result-item" href="${base}screens/detail.html?id=${app.id}">
+    results.innerHTML = matched.map((app, i) => `
+      <a class="search-result-item" href="${base}screens/detail.html?id=${app.id}" data-od-id="search-result-${i}">
         ${appBrandIcon(app, 'sm')}
-        <div class="search-result-info">
-          <strong>${app.name}</strong>
-          <span>${app.category} · ${app.desc.slice(0, 20)}…</span>
+        <div class="search-result-info" data-od-id="search-result-info-${i}">
+          <strong data-od-id="search-result-name-${i}">${app.name}</strong>
+          <span data-od-id="search-result-meta-${i}">${app.category} · ${app.desc.slice(0, 20)}…</span>
         </div>
       </a>`).join('');
   }

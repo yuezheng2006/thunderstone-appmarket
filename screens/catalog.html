@@ -7,32 +7,32 @@
   <link rel="stylesheet" href="../assets/system.css">
 </head>
 <body>
-  <div id="app">
-  <div class="shell" data-shell>
-    <main class="main catalog-main">
-      <div class="catalog-layout">
-        <aside class="category-sidebar">
-          <div class="chip-row stack" data-category-chips></div>
+  <div id="app" data-od-id="app-root">
+  <div class="shell" data-shell data-od-id="shell">
+    <main class="main catalog-main" data-od-id="main-content">
+      <div class="catalog-layout" data-od-id="catalog-layout">
+        <aside class="category-sidebar" data-od-id="category-sidebar">
+          <div class="chip-row stack" data-category-chips data-od-id="category-chips"></div>
         </aside>
-        <section class="catalog-results">
-          <div class="section-head">
-            <h2 data-catalog-title>全部应用</h2>
-            <div class="segmented" aria-label="安装状态">
-              <button class="active" data-segment="all">全部</button>
-              <button data-segment="installed">已装</button>
-              <button data-segment="update">升级</button>
+        <section class="catalog-results" data-od-id="catalog-results">
+          <div class="section-head" data-od-id="catalog-header">
+            <h2 data-catalog-title data-od-id="catalog-title">全部应用</h2>
+            <div class="segmented" aria-label="安装状态" data-od-id="filter-segmented">
+              <button class="active" data-segment="all" data-od-id="filter-all">全部</button>
+              <button data-segment="installed" data-od-id="filter-installed">已装</button>
+              <button data-segment="update" data-od-id="filter-update">升级</button>
             </div>
           </div>
-          <div class="catalog-scroll">
-            <div class="app-grid" data-app-list></div>
-            <div class="pager" data-pager></div>
-            <div class="empty" data-empty>没有找到匹配的应用</div>
+          <div class="catalog-scroll" data-od-id="catalog-scroll">
+            <div class="app-grid" data-app-list data-od-id="app-grid"></div>
+            <div class="pager" data-pager data-od-id="pager"></div>
+            <div class="empty" data-empty data-od-id="empty-state">没有找到匹配的应用</div>
           </div>
         </section>
       </div>
     </main>
   </div>
-  <div class="toast" data-toast-box></div>
+  <div class="toast" data-toast-box data-od-id="toast"></div>
   </div>
   <script src="../assets/app.js"></script>
   <script>initPage('分类');</script>

@@ -7,50 +7,50 @@
   <link rel="stylesheet" href="../assets/system.css">
 </head>
 <body>
-  <div id="app">
-  <div class="shell" data-shell>
-    <main class="main">
-      <section class="grid">
-        <div class="panel span-8">
-          <div class="account-preview">
-            <div class="account-avatar">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M3 21a9 9 0 0 1 18 0"/></svg>
+  <div id="app" data-od-id="app-root">
+  <div class="shell" data-shell data-od-id="shell">
+    <main class="main" data-od-id="main-content">
+      <section class="grid" data-od-id="user-grid">
+        <div class="panel span-8" data-od-id="account-panel">
+          <div class="account-preview" data-od-id="account-preview">
+            <div class="account-avatar" data-od-id="account-avatar">
+              <svg viewBox="0 0 24 24" data-od-id="avatar-icon"><circle cx="12" cy="8" r="5"/><path d="M3 21a9 9 0 0 1 18 0"/></svg>
             </div>
-            <div class="account-info">
-              <span class="tag">功能预留</span>
-              <h1>账户功能即将开放</h1>
-              <p>当前版本聚焦应用浏览、下载和更新管理。账户相关功能将在后续版本开放。</p>
+            <div class="account-info" data-od-id="account-info">
+              <span class="tag" data-od-id="account-tag">功能预留</span>
+              <h1 data-od-id="account-title">账户功能即将开放</h1>
+              <p data-od-id="account-desc">当前版本聚焦应用浏览、下载和更新管理。账户相关功能将在后续版本开放。</p>
             </div>
           </div>
         </div>
 
-        <aside class="panel span-4">
-          <div class="section-head"><h2>快捷操作</h2></div>
-          <div class="settings-list">
-            <a class="list-card" href="home.html">
-              <span class="rank-icon" style="background:var(--cyan)">
+        <aside class="panel span-4" data-od-id="shortcuts-panel">
+          <div class="section-head" data-od-id="shortcuts-header"><h2 data-od-id="shortcuts-title">快捷操作</h2></div>
+          <div class="settings-list" data-od-id="shortcuts-list">
+            <a class="list-card" href="home.html" data-od-id="shortcut-home">
+              <span class="rank-icon" style="background:var(--cyan)" data-od-id="shortcut-home-icon">
                 <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </span>
-              <div><strong>返回推荐</strong><p>浏览今日推荐应用</p></div>
+              <div data-od-id="shortcut-home-text"><strong data-od-id="shortcut-home-title">返回推荐</strong><p data-od-id="shortcut-home-desc">浏览今日推荐应用</p></div>
             </a>
-            <a class="list-card" href="catalog.html">
-              <span class="rank-icon" style="background:var(--blue)">
+            <a class="list-card" href="catalog.html" data-od-id="shortcut-catalog">
+              <span class="rank-icon" style="background:var(--blue)" data-od-id="shortcut-catalog-icon">
                 <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
               </span>
-              <div><strong>浏览分类</strong><p>按分类查找应用</p></div>
+              <div data-od-id="shortcut-catalog-text"><strong data-od-id="shortcut-catalog-title">浏览分类</strong><p data-od-id="shortcut-catalog-desc">按分类查找应用</p></div>
             </a>
-            <a class="list-card" href="manage.html">
-              <span class="rank-icon" style="background:var(--gold)">
+            <a class="list-card" href="manage.html" data-od-id="shortcut-manage">
+              <span class="rank-icon" style="background:var(--gold)" data-od-id="shortcut-manage-icon">
                 <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               </span>
-              <div><strong>我的应用</strong><p>管理已安装和下载</p></div>
+              <div data-od-id="shortcut-manage-text"><strong data-od-id="shortcut-manage-title">我的应用</strong><p data-od-id="shortcut-manage-desc">管理已安装和下载</p></div>
             </a>
           </div>
         </aside>
       </section>
     </main>
   </div>
-  <div class="toast" data-toast-box></div>
+  <div class="toast" data-toast-box data-od-id="toast"></div>
   </div>
   <script src="../assets/app.js"></script>
   <script>initPage('账户');</script>

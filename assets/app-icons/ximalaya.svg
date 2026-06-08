@@ -1,0 +1,12 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ximalaya-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B3A"/>
+      <stop offset="100%" style="stop-color:#F5423A"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#ximalaya-bg)"/>
+  <path d="M160 200c0-44 36-80 80-80s80 36 80 80c0 24-10 46-26 62l-54 54c-16 16-16 42 0 58s42 16 58 0l34-34c22-22 58-22 80 0s22 58 0 80l-34 34c-48 48-126 48-174 0l-54-54c-48-48-48-126 0-174 32-32 74-46 116-40" stroke="white" stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="200" r="28" fill="white"/>
+  <path d="M210 320c0-24 20-44 46-44s46 20 46 44-20 46-46 46-46-22-46-46z" fill="white"/>
+</svg>
