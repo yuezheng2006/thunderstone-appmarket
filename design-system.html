@@ -6,11 +6,18 @@
   <title>ThunderStone Design System</title>
   <link rel="stylesheet" href="assets/system.css">
   <style>
-    /* 覆盖 system.css 中的滚动限制 */
-    html, body {
-      overflow: auto !important;
+    /* 关键修复：强制覆盖 system.css 的 overflow:hidden */
+    html {
+      overflow-y: scroll !important;
+      overflow-x: hidden !important;
+      height: 100% !important;
+    }
+
+    body {
+      overflow: visible !important;
+      overflow-y: visible !important;
       height: auto !important;
-      min-height: 100%;
+      min-height: 100vh !important;
       background:
         radial-gradient(circle at 18% 0%, rgba(124, 199, 255, 0.22) 0%, transparent 34%),
         radial-gradient(circle at 86% 16%, rgba(58, 124, 255, 0.15) 0%, transparent 32%),
