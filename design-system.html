@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThunderStone Design System</title>
+  <title>ThunderStone 设计系统规范</title>
   <link rel="stylesheet" href="assets/system.css">
   <style>
     /* 关键修复：强制覆盖 system.css 的 overflow:hidden */
@@ -956,6 +956,124 @@
       </div>
     </section>
 
+    <!-- 图标系统 -->
+    <section class="ds-section" data-od-id="icon-section">
+      <h2 class="ds-section-title">图标系统</h2>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">应用图标 (App Icon)</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          应用图标是 ThunderStone 最核心的视觉元素，分为三种尺寸和两种形式（品牌图标 / 占位图标）。
+        </p>
+
+        <div class="token-grid">
+          <div class="token-card" data-od-id="app-icon-default">
+            <p class="token-name">.app-icon (默认)</p>
+            <p class="token-value">88×88px, 圆角 22px</p>
+            <div class="token-preview" style="padding: 20px;">
+              <div class="app-icon" style="background: #285CF6;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 42px; height: 42px;">
+                  <path d="M9 18V5l12-2v13M9 13c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/>
+                </svg>
+              </div>
+            </div>
+            <p style="font-size: 13px; color: var(--fg-tertiary); margin-top: 8px;">
+              用于应用卡片、精选推荐、排行榜
+            </p>
+          </div>
+
+          <div class="token-card" data-od-id="app-icon-sm">
+            <p class="token-name">.app-icon--sm</p>
+            <p class="token-value">54×54px, 圆角 14px</p>
+            <div class="token-preview" style="padding: 20px;">
+              <div class="app-icon app-icon--sm" style="background: #10B981;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px;">
+                  <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                </svg>
+              </div>
+            </div>
+            <p style="font-size: 13px; color: var(--fg-tertiary); margin-top: 8px;">
+              用于场景推荐、紧凑列表
+            </p>
+          </div>
+
+          <div class="token-card" data-od-id="app-icon-lg">
+            <p class="token-name">.app-icon--lg</p>
+            <p class="token-value">92×92px, 圆角 22px</p>
+            <div class="token-preview" style="padding: 20px;">
+              <div class="app-icon app-icon--lg" style="background: #F59E0B;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 44px; height: 44px;">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </div>
+            </div>
+            <p style="font-size: 13px; color: var(--fg-tertiary); margin-top: 8px;">
+              用于详情页大图展示
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; padding: 16px; background: rgba(124, 199, 255, 0.08); border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+          <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 8px;">图标规范</p>
+          <ul style="font-size: 14px; color: var(--fg-secondary); line-height: 1.8; padding-left: 20px;">
+            <li><strong>品牌图标</strong>：优先使用真实应用图标（PNG/JPG/SVG），使用 <code>brand: 'image'</code> + <code>image: 'path'</code></li>
+            <li><strong>占位图标</strong>：纯色背景 + 白色线条图标（stroke-width: 1.5-2），图标尺寸约为容器的 48%</li>
+            <li><strong>阴影系统</strong>：外阴影 <code>0 16px 30px rgba(0,0,0,0.26)</code> + 内光 <code>inset 0 1px 0 rgba(255,255,255,0.12)</code></li>
+            <li><strong>边框</strong>：<code>1px solid rgba(255,255,255,0.18)</code> + 外发光 <code>0 0 0 1px rgba(124,199,255,0.08)</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">UI 图标 (Interface Icon)</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          界面图标用于按钮、导航、操作提示等 UI 元素，统一使用 Feather Icons 线条风格。
+        </p>
+
+        <div class="token-grid">
+          <div class="token-card" data-od-id="icon-default">
+            <p class="token-name">.icon (默认)</p>
+            <p class="token-value">24×24px, stroke-width: 2</p>
+            <div class="token-preview" style="padding: 20px;">
+              <svg class="icon" viewBox="0 0 24 24" style="color: var(--fg);">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="token-card" data-od-id="icon-sm">
+            <p class="token-name">.icon (小尺寸)</p>
+            <p class="token-value">14-16px (用于评分、标签)</p>
+            <div class="token-preview" style="padding: 20px;">
+              <svg viewBox="0 0 24 24" fill="var(--accent)" stroke="none" style="width: 14px; height: 14px;">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="token-card" data-od-id="icon-lg">
+            <p class="token-name">.icon (大尺寸)</p>
+            <p class="token-value">32-48px (用于空状态)</p>
+            <div class="token-preview" style="padding: 20px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--fg-tertiary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; padding: 16px; background: rgba(124, 199, 255, 0.08); border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+          <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 8px;">UI 图标规范</p>
+          <ul style="font-size: 14px; color: var(--fg-secondary); line-height: 1.8; padding-left: 20px;">
+            <li><strong>默认样式</strong>：<code>stroke: currentColor</code>, <code>fill: none</code>, <code>stroke-linecap: round</code></li>
+            <li><strong>颜色继承</strong>：图标颜色跟随父元素的 <code>color</code> 属性，方便状态变化</li>
+            <li><strong>语义化命名</strong>：home, search, user, download, settings, heart, star 等</li>
+            <li><strong>触控目标</strong>：包含图标的可点击区域最小 48×48px（即使图标本身只有 24px）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- 动画系统 -->
     <section class="ds-section" data-od-id="animation-section">
       <h2 class="ds-section-title">动画系统</h2>
@@ -1239,6 +1357,169 @@
               <span style="font-family: var(--font-mono); color: var(--primary);">65%</span>
             </div>
           </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 布局组件系统 -->
+    <section class="ds-section" data-od-id="layout-section">
+      <h2 class="ds-section-title">布局组件系统</h2>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">固定画布布局 (1280×720)</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          ThunderStone 使用固定画布系统，所有页面统一为 1280×720px，通过 CSS transform scale 适配不同屏幕。
+        </p>
+
+        <div style="background: var(--surface-elevated); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div>
+              <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px;">#app 容器</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; font-size: 13px; color: var(--fg-secondary); overflow-x: auto; line-height: 1.6;"><code>position: fixed;
+width: 1280px;
+height: 720px;
+transform: translate(-50%, -50%)
+           scale(var(--stage-scale));
+transform-origin: center;</code></pre>
+            </div>
+            <div>
+              <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px;">.shell 外壳</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; font-size: 13px; color: var(--fg-secondary); overflow-x: auto; line-height: 1.6;"><code>width: 1280px;
+height: 720px;
+display: flex;
+flex-direction: column;
+overflow: hidden;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">内容区域与 Dock</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          主内容区 (.main) 占据弹性空间，底部固定 Dock 导航高度为 48px。
+        </p>
+
+        <div style="background: var(--surface-elevated); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div>
+              <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px;">.main 主内容区</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; font-size: 13px; color: var(--fg-secondary); overflow-x: auto; line-height: 1.6;"><code>flex: 1;
+min-height: 0;
+overflow-y: auto;
+overflow-x: hidden;
+padding: 16px 24px;
+padding-bottom: calc(48px + 16px);</code></pre>
+            </div>
+            <div>
+              <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px;">.dock 底部导航</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; font-size: 13px; color: var(--fg-secondary); overflow-x: auto; line-height: 1.6;"><code>position: absolute;
+bottom: 0;
+height: 48px;
+backdrop-filter: blur(24px);
+background: rgba(24,58,98,0.88);
+border-top: 1px solid var(--border);</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">网格与间距系统</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          ThunderStone 遵循 8dp Grid System，所有间距、尺寸都是 4 的倍数。
+        </p>
+
+        <div style="background: var(--surface-elevated); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border); margin-bottom: 20px;">
+          <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px;">常用布局间距</p>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+            <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <p style="font-size: 13px; color: var(--fg-tertiary); margin-bottom: 4px;">组件内间距</p>
+              <p style="font-size: 16px; font-weight: 600; color: var(--fg);">8-16px</p>
+              <p style="font-size: 12px; color: var(--fg-secondary);">--space-2 ~ --space-4</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <p style="font-size: 13px; color: var(--fg-tertiary); margin-bottom: 4px;">区块间距</p>
+              <p style="font-size: 16px; font-weight: 600; color: var(--fg);">20-32px</p>
+              <p style="font-size: 12px; color: var(--fg-secondary);">--space-5 ~ --space-8</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <p style="font-size: 13px; color: var(--fg-tertiary); margin-bottom: 4px;">页面边距</p>
+              <p style="font-size: 16px; font-weight: 600; color: var(--fg);">24-48px</p>
+              <p style="font-size: 12px; color: var(--fg-secondary);">--space-6 ~ --space-12</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--surface-elevated); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border);">
+          <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 12px;">常用网格布局</p>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin-bottom: 8px;">应用卡片列表 (6列)</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; font-size: 12px; color: var(--fg-secondary); line-height: 1.5;"><code>display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 16px;</code></pre>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin-bottom: 8px;">精选卡片滚动 (横向)</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; font-size: 12px; color: var(--fg-secondary); line-height: 1.5;"><code>display: flex;
+gap: 16px;
+overflow-x: auto;
+scroll-snap-type: x mandatory;</code></pre>
+            </div>
+            <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
+              <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin-bottom: 8px;">排行榜双列</p>
+              <pre style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; font-size: 12px; color: var(--fg-secondary); line-height: 1.5;"><code>display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">卡片与容器组件</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          卡片组件是最常用的内容容器，分为不同层级的表面提升。
+        </p>
+
+        <div style="background: var(--surface-elevated); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border);">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+            <div style="background: var(--surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+              <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin-bottom: 8px;">基础表面</p>
+              <p style="font-size: 12px; color: var(--fg-tertiary); margin-bottom: 8px;">--surface</p>
+              <p style="font-size: 11px; color: var(--fg-secondary); line-height: 1.5;">用于列表项、卡片基础背景</p>
+            </div>
+            <div style="background: var(--surface-elevated); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+              <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin-bottom: 8px;">提升表面</p>
+              <p style="font-size: 12px; color: var(--fg-tertiary); margin-bottom: 8px;">--surface-elevated</p>
+              <p style="font-size: 11px; color: var(--fg-secondary); line-height: 1.5;">用于应用图标、精选卡片</p>
+            </div>
+            <div style="background: var(--surface-hover); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border);">
+              <p style="font-size: 13px; font-weight: 600; color: var(--fg); margin-bottom: 8px;">悬停表面</p>
+              <p style="font-size: 12px; color: var(--fg-tertiary); margin-bottom: 8px;">--surface-hover</p>
+              <p style="font-size: 11px; color: var(--fg-secondary); line-height: 1.5;">用于 hover 状态交互反馈</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-subsection">
+        <h3 class="ds-subsection-title">响应式与滚动</h3>
+        <p style="color: var(--fg-secondary); margin-bottom: 16px; line-height: 1.6;">
+          虽然画布固定，但内容区域支持垂直滚动，横向滚动用于特定组件（精选区、场景推荐）。
+        </p>
+
+        <div style="background: rgba(124, 199, 255, 0.08); border-radius: var(--radius-md); padding: 16px; border-left: 3px solid var(--primary);">
+          <p style="font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 8px;">布局原则</p>
+          <ul style="font-size: 14px; color: var(--fg-secondary); line-height: 1.8; padding-left: 20px;">
+            <li><strong>固定画布</strong>：1280×720px 固定尺寸，通过 scale 等比缩放适配屏幕</li>
+            <li><strong>垂直滚动</strong>：主内容区 (.main) 支持 overflow-y: auto，内容可超出一屏</li>
+            <li><strong>横向滚动</strong>：精选区、场景推荐使用 overflow-x: auto + scroll-snap</li>
+            <li><strong>层级管理</strong>：Dock (z-index: 10) > 搜索/模态 (z-index: 100) > 内容 (z-index: 1)</li>
+            <li><strong>触控优化</strong>：所有可点击元素最小 48×48px，滚动区域支持触控拖拽</li>
+          </ul>
         </div>
       </div>
 

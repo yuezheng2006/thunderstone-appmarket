@@ -511,7 +511,7 @@ h6 { font-size: var(--text-base); }
 /* 卸载 - 红色渐变 */
 .btn-danger, .btn-uninstall {
   background: var(--danger-gradient);
-  color: #fff;
+  color: var(--fg);
 }
 .btn-danger:hover, .btn-uninstall:hover {
   background: var(--danger-hover);
@@ -1953,7 +1953,7 @@ a:focus-visible {
 
 .pager-btn:not([disabled]):hover {
   background: var(--primary);
-  color: #fff;
+  color: var(--on-primary);
 }
 
 .pager-btn:not([disabled]):active {
@@ -2021,9 +2021,9 @@ a:focus-visible {
 }
 
 .cat-tab.active {
-  color: #09213B;
+  color: var(--on-primary);
   font-weight: 850;
-  background: linear-gradient(135deg, #D4F1FF 0%, #8FD4FF 48%, #64B9FF 100%);
+  background: var(--primary-gradient);
   box-shadow: 0 12px 28px rgba(18, 96, 180, 0.34), 0 0 0 1px rgba(218, 244, 255, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.50);
 }
 
