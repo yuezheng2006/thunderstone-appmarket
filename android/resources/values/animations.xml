@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ThunderStone 应用市场 - 动画时长 -->
+<resources>
+    <!-- 动画时长 (ms) -->
+    <integer name="anim_duration_fast">150</integer>
+    <integer name="anim_duration_normal">250</integer>
+    <integer name="anim_duration_slow">350</integer>
+    
+    <!-- 缓动曲线插值器 -->
+    <string name="anim_ease_out_cubic">cubic-bezier(0.33, 1, 0.68, 1)</string>
+    <string name="anim_ease_in_out_cubic">cubic-bezier(0.65, 0, 0.35, 1)</string>
+</resources>

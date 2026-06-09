@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ThunderStone 应用市场 - 颜色系统 Design Token -->
+<!-- 转换自 Web CSS :root 变量 -->
+<resources>
+    <!-- 背景色系统 -->
+    <color name="bg_deep">#102640</color>
+    <color name="bg">#183A62</color>
+    <color name="surface">#16FFFFFF</color> <!-- rgba(255, 255, 255, 0.085) -->
+    <color name="surface_elevated">#23FFFFFF</color> <!-- rgba(255, 255, 255, 0.135) -->
+    <color name="surface_hover">#30FFFFFF</color> <!-- rgba(255, 255, 255, 0.19) -->
+
+    <!-- 前景色（文字颜色） -->
+    <color name="fg">#F4F8FC</color>
+    <color name="fg_secondary">#CEE4F8</color>
+    <color name="fg_tertiary">#9CC2E4</color>
+
+    <!-- 边框颜色 -->
+    <color name="border">#21C2E0FF</color> <!-- rgba(194, 224, 255, 0.13) -->
+    <color name="border_strong">#3DC2E0FF</color> <!-- rgba(194, 224, 255, 0.24) -->
+
+    <!-- 主色系统 - 海外产品感的明亮蓝 -->
+    <color name="primary">#7CC7FF</color>
+    <color name="primary_hover">#9AD7FF</color>
+    <color name="primary_pressed">#54B3F5</color>
+    <color name="on_primary">#0A1628</color>
+    <color name="cyan">#7CC7FF</color>
+
+    <!-- 主色渐变起止点（用于 drawable gradient） -->
+    <color name="primary_gradient_start">#9AD7FF</color>
+    <color name="primary_gradient_mid">#4BA3FF</color>
+    <color name="primary_gradient_end">#2B7DFF</color>
+
+    <!-- 强调色 - 克制珊瑚金 -->
+    <color name="accent">#FFC56E</color>
+    <color name="accent_hover">#FFD08A</color>
+    <color name="on_accent">#172338</color>
+
+    <!-- 强调色渐变起止点 -->
+    <color name="accent_gradient_start">#FFD68F</color>
+    <color name="accent_gradient_end">#FFB23F</color>
+
+    <!-- 危险色 - 卸载/删除 -->
+    <color name="danger">#FF4D5E</color>
+    <color name="danger_hover">#E8404F</color>
+
+    <!-- 危险色渐变起止点 -->
+    <color name="danger_gradient_start">#FF4D5E</color>
+    <color name="danger_gradient_end">#E8364A</color>
+
+    <!-- 状态色 -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="info">#3B82F6</color>
+
+    <!-- 补充色 - 用于图标背景 -->
+    <color name="blue">#3B82F6</color>
+    <color name="gold">#F59E0B</color>
+    <color name="violet">#8B5CF6</color>
+    <color name="green">#10B981</color>
+
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+
+    <!-- 遮罩色 -->
+    <color name="overlay_dark">#80000000</color> <!-- 50% 黑色遮罩 -->
+    <color name="overlay_light">#40FFFFFF</color> <!-- 25% 白色遮罩 -->
+</resources>

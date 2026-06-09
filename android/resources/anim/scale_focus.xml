@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 获得焦点时放大动画 - TV 遥控器导航 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:duration="@integer/anim_duration_fast"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:toXScale="1.05"
+        android:toYScale="1.05"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:interpolator="@android:anim/decelerate_interpolator" />
+    <alpha
+        android:duration="@integer/anim_duration_fast"
+        android:fromAlpha="1.0"
+        android:toAlpha="1.0" />
+</set>

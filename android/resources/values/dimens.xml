@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ThunderStone 应用市场 - 尺寸系统 Design Token -->
+<!-- 基于 8dp Grid 系统 -->
+<resources>
+    <!-- 字号系统 (sp) -->
+    <dimen name="text_xs">12sp</dimen>
+    <dimen name="text_sm">14sp</dimen>
+    <dimen name="text_base">16sp</dimen>
+    <dimen name="text_lg">18sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_2xl">24sp</dimen>
+    <dimen name="text_3xl">28sp</dimen>
+    <dimen name="text_4xl">32sp</dimen>
+
+    <!-- 间距系统 (dp) - 8dp Grid -->
+    <dimen name="space_1">4dp</dimen>
+    <dimen name="space_2">8dp</dimen>
+    <dimen name="space_3">12dp</dimen>
+    <dimen name="space_4">16dp</dimen>
+    <dimen name="space_5">20dp</dimen>
+    <dimen name="space_6">24dp</dimen>
+    <dimen name="space_8">32dp</dimen>
+    <dimen name="space_10">40dp</dimen>
+    <dimen name="space_12">48dp</dimen>
+    <dimen name="space_16">64dp</dimen>
+
+    <!-- 圆角系统 (dp) -->
+    <dimen name="radius_xs">4dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">24dp</dimen>
+    <dimen name="radius_full">9999dp</dimen>
+
+    <!-- 触控规范 (dp) - TV 适配 -->
+    <dimen name="touch_min">48dp</dimen>
+    <dimen name="touch_comfortable">56dp</dimen>
+    <dimen name="touch_large">64dp</dimen>
+
+    <!-- 应用图标尺寸 (dp) -->
+    <dimen name="app_icon_default">88dp</dimen>
+    <dimen name="app_icon_small">54dp</dimen>
+    <dimen name="app_icon_large">92dp</dimen>
+    <dimen name="app_icon_radius">12dp</dimen>
+
+    <!-- UI 图标尺寸 (dp) -->
+    <dimen name="ui_icon_small">16dp</dimen>
+    <dimen name="ui_icon_default">24dp</dimen>
+    <dimen name="ui_icon_large">32dp</dimen>
+    <dimen name="ui_icon_xlarge">48dp</dimen>
+
+    <!-- 按钮尺寸 (dp) -->
+    <dimen name="btn_height_default">48dp</dimen>
+    <dimen name="btn_height_small">40dp</dimen>
+    <dimen name="btn_height_large">56dp</dimen>
+    <dimen name="btn_min_width">80dp</dimen>
+    <dimen name="btn_padding_h">24dp</dimen>
+    <dimen name="btn_padding_v">12dp</dimen>
+
+    <!-- 卡片尺寸 (dp) -->
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+
+    <!-- 画布尺寸 (dp) - TV 1280×720 -->
+    <dimen name="design_width">1280dp</dimen>
+    <dimen name="design_height">720dp</dimen>
+
+    <!-- Dock 高度 (dp) -->
+    <dimen name="dock_height">48dp</dimen>
+
+    <!-- 边框宽度 (dp) -->
+    <dimen name="border_thin">1dp</dimen>
+    <dimen name="border_medium">2dp</dimen>
+    <dimen name="border_thick">3dp</dimen>
+
+    <!-- 阴影高度 (dp) -->
+    <dimen name="elevation_sm">2dp</dimen>
+    <dimen name="elevation_md">8dp</dimen>
+    <dimen name="elevation_lg">14dp</dimen>
+    <dimen name="elevation_xl">24dp</dimen>
+</resources>
