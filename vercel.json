@@ -28,5 +28,9 @@
         }
       ]
     }
-  ]
+  ],
+  "protection": {
+    "enabled": false
+  },
+  "redirects": []
 }
